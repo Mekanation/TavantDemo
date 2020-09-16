@@ -10,9 +10,11 @@ import java.time.LocalDate;
 
 @Entity
 @NamedQuery(name = Loan.GET_ALL_LOANS_BY_OWNER, query = "select l from Loan l where l.loanRequester.email = :email")
+@NamedQuery(name = Loan.GET_LOAN_BY_ID, query = "select l from Loan l where l.id = :id and l.loanRequester.email = :email")
 public class Loan extends AbstractEntity{
 
     public static final String GET_ALL_LOANS_BY_OWNER = "Loan.findByOwner";
+    public static final String GET_LOAN_BY_ID = "Loan.findById";
 
     @NotNull(message = "Loan name must be set")
     @Pattern(regexp = "(?i)^[A-Z]+$", message = "Loan Name must be alphabetical only")
@@ -20,6 +22,9 @@ public class Loan extends AbstractEntity{
 
     @NotNull(message = "Income needs to be verified")
     private boolean isIncomeVerified;
+
+
+    private boolean approvalStatus;
 
     @NotNull(message = "Annual income needs to be set.")
     @DecimalMin(value= "0.00", message = "Value cannot be negative")
@@ -48,7 +53,10 @@ public class Loan extends AbstractEntity{
     private LocalDate dateCreated;
 
     @PrePersist
-    private void init() {setDateCreated(LocalDate.now());}
+    private void init() {
+        setDateCreated(LocalDate.now());
+        setApprovalStatus(false);
+    }
 
     private void setDateCreated(LocalDate dateCreated) {
         this.dateCreated = dateCreated;
@@ -117,5 +125,17 @@ public class Loan extends AbstractEntity{
 
     public void setLoanRequester(User loanRequester) {
         this.loanRequester = loanRequester;
+    }
+
+    public boolean isApprovalStatus() {
+        return approvalStatus;
+    }
+
+    public void setApprovalStatus(boolean approvalStatus) {
+        this.approvalStatus = approvalStatus;
+    }
+
+    public LocalDate getDateCreated() {
+        return dateCreated;
     }
 }

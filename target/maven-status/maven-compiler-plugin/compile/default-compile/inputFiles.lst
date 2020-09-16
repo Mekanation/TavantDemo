@@ -1,0 +1,11 @@
+/home/cw/Documents/Code/TavantDemo/src/main/java/entities/AbstractEntity.java
+/home/cw/Documents/Code/TavantDemo/src/main/java/service/QueryService.java
+/home/cw/Documents/Code/TavantDemo/src/main/java/restclient/LoanRest.java
+/home/cw/Documents/Code/TavantDemo/src/main/java/restclient/UserRest.java
+/home/cw/Documents/Code/TavantDemo/src/main/java/service/CDIProducer.java
+/home/cw/Documents/Code/TavantDemo/src/main/java/service/SecurityUtil.java
+/home/cw/Documents/Code/TavantDemo/src/main/java/restclient/Authz.java
+/home/cw/Documents/Code/TavantDemo/src/main/java/service/LoanService.java
+/home/cw/Documents/Code/TavantDemo/src/main/java/restclient/LoanConfig.java
+/home/cw/Documents/Code/TavantDemo/src/main/java/entities/User.java
+/home/cw/Documents/Code/TavantDemo/src/main/java/entities/Loan.java

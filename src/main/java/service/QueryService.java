@@ -44,8 +44,15 @@ public class QueryService {
     }
 
 
-
-
+    public Loan getLoanById(Long id) {
+        List<Loan> result = entityManager.createNamedQuery(Loan.GET_LOAN_BY_ID, Loan.class)
+                .setParameter("id", id)
+                .setParameter("email", securityContext.getUserPrincipal()).getResultList();
+        if(!result.isEmpty()){
+            return result.get(0);
+        }
+        return null;
+    }
 
 
 }
