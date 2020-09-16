@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="TavantDemo:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>TavantDemo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="TavantDemo-1.war">
+      <element id="artifact" artifact-name="TavantDemo:war exploded" />
+    </root>
+  </artifact>
+</component>
