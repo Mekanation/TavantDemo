@@ -55,7 +55,6 @@ public class Loan extends AbstractEntity{
     @PrePersist
     private void init() {
         setDateCreated(LocalDate.now());
-        setApprovalStatus(false);
     }
 
     private void setDateCreated(LocalDate dateCreated) {
