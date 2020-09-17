@@ -1,0 +1,14 @@
+restclient/LoanRest.class
+restclient/Authz.class
+restclient/SecurityFilter.class
+service/LoanService.class
+restclient/SecurityFilter$1.class
+service/QueryService.class
+entities/User.class
+restclient/UserRest.class
+service/SecurityUtil.class
+entities/Loan.class
+service/CDIProducer.class
+entities/AbstractEntity.class
+restclient/LoanConfig.class
+restclient/SecurityFilter$1$1.class
