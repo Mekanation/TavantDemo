@@ -1,3 +1,4 @@
+restclient/CorsFilter.class
 restclient/LoanRest.class
 restclient/Authz.class
 restclient/SecurityFilter.class
