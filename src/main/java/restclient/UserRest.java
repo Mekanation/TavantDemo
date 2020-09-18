@@ -33,7 +33,7 @@ public class UserRest {
 
         boolean authenticated = securityUtil.authenticateUser(email, password);
         if(!authenticated){
-            throw new SecurityException("Email or password not valid");
+            throw new NotAuthorizedException("Email or password not valid");
         }
 
         String token = generateToken(email);
